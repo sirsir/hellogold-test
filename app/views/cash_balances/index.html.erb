@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Cash Balances</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Amount</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cash_balances.each do |cash_balance| %>
+      <tr>
+        <td><%= cash_balance.amount %></td>
+        <td><%= cash_balance.User %></td>
+        <td><%= link_to 'Show', cash_balance %></td>
+        <td><%= link_to 'Edit', edit_cash_balance_path(cash_balance) %></td>
+        <td><%= link_to 'Destroy', cash_balance, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cash balance', new_cash_balance_path %>

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @gold_balance.amount %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @gold_balance.User %>
+</p>
+
+<%= link_to 'Edit', edit_gold_balance_path(@gold_balance) %> |
+<%= link_to 'Back', gold_balances_path %>

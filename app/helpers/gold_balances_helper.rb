@@ -1,0 +1,2 @@
+module GoldBalancesHelper
+end

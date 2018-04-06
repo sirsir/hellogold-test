@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Gold Balances</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Amount</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @gold_balances.each do |gold_balance| %>
+      <tr>
+        <td><%= gold_balance.amount %></td>
+        <td><%= gold_balance.User %></td>
+        <td><%= link_to 'Show', gold_balance %></td>
+        <td><%= link_to 'Edit', edit_gold_balance_path(gold_balance) %></td>
+        <td><%= link_to 'Destroy', gold_balance, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Gold balance', new_gold_balance_path %>
