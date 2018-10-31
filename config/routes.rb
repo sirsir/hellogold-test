@@ -1,15 +1,8 @@
 Rails.application.routes.draw do
   resources :gold_balances
   resources :cash_balances
+  resources :users
   resources :transactions
-  resources :apis
-  devise_for :users
-
-  get '/api/transactions', :controller => 'apis', :action => 'transactions'
-  get '/api/top_up', :controller => 'apis', :action => 'top_up'
-  get '/api/buy', :controller => 'apis', :action => 'buy'
-  get '/api/sell', :controller => 'apis', :action => 'sell'
-  get '/api/balances', :controller => 'apis', :action => 'balances'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

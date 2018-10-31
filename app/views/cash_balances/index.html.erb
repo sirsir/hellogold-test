@@ -15,7 +15,7 @@
     <% @cash_balances.each do |cash_balance| %>
       <tr>
         <td><%= cash_balance.amount %></td>
-        <td><%= cash_balance.User %></td>
+        <td><%= cash_balance.user %></td>
         <td><%= link_to 'Show', cash_balance %></td>
         <td><%= link_to 'Edit', edit_cash_balance_path(cash_balance) %></td>
         <td><%= link_to 'Destroy', cash_balance, method: :delete, data: { confirm: 'Are you sure?' } %></td>

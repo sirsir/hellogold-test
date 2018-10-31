@@ -69,6 +69,6 @@ class GoldBalancesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def gold_balance_params
-      params.require(:gold_balance).permit(:amount, :User_id)
+      params.require(:gold_balance).permit(:amount, :user_id)
     end
 end

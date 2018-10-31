@@ -15,7 +15,7 @@
     <% @gold_balances.each do |gold_balance| %>
       <tr>
         <td><%= gold_balance.amount %></td>
-        <td><%= gold_balance.User %></td>
+        <td><%= gold_balance.user %></td>
         <td><%= link_to 'Show', gold_balance %></td>
         <td><%= link_to 'Edit', edit_gold_balance_path(gold_balance) %></td>
         <td><%= link_to 'Destroy', gold_balance, method: :delete, data: { confirm: 'Are you sure?' } %></td>

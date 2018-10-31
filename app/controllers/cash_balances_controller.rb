@@ -69,6 +69,6 @@ class CashBalancesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def cash_balance_params
-      params.require(:cash_balance).permit(:amount, :User_id)
+      params.require(:cash_balance).permit(:amount, :user_id)
     end
 end

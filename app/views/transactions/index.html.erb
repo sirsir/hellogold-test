@@ -17,7 +17,7 @@
     <% @transactions.each do |transaction| %>
       <tr>
         <td><%= transaction.txref %></td>
-        <td><%= transaction.t %></td>
+        <td><%= transaction.type %></td>
         <td><%= transaction.asset %></td>
         <td><%= transaction.amount %></td>
         <td><%= link_to 'Show', transaction %></td>

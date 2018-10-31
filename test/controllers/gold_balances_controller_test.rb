@@ -18,7 +18,7 @@ class GoldBalancesControllerTest < ActionController::TestCase
 
   test "should create gold_balance" do
     assert_difference('GoldBalance.count') do
-      post :create, gold_balance: { User_id: @gold_balance.User_id, amount: @gold_balance.amount }
+      post :create, gold_balance: { amount: @gold_balance.amount, user_id: @gold_balance.user_id }
     end
 
     assert_redirected_to gold_balance_path(assigns(:gold_balance))
@@ -35,7 +35,7 @@ class GoldBalancesControllerTest < ActionController::TestCase
   end
 
   test "should update gold_balance" do
-    patch :update, id: @gold_balance, gold_balance: { User_id: @gold_balance.User_id, amount: @gold_balance.amount }
+    patch :update, id: @gold_balance, gold_balance: { amount: @gold_balance.amount, user_id: @gold_balance.user_id }
     assert_redirected_to gold_balance_path(assigns(:gold_balance))
   end
 

@@ -18,7 +18,7 @@ class CashBalancesControllerTest < ActionController::TestCase
 
   test "should create cash_balance" do
     assert_difference('CashBalance.count') do
-      post :create, cash_balance: { User_id: @cash_balance.User_id, amount: @cash_balance.amount }
+      post :create, cash_balance: { amount: @cash_balance.amount, user_id: @cash_balance.user_id }
     end
 
     assert_redirected_to cash_balance_path(assigns(:cash_balance))
@@ -35,7 +35,7 @@ class CashBalancesControllerTest < ActionController::TestCase
   end
 
   test "should update cash_balance" do
-    patch :update, id: @cash_balance, cash_balance: { User_id: @cash_balance.User_id, amount: @cash_balance.amount }
+    patch :update, id: @cash_balance, cash_balance: { amount: @cash_balance.amount, user_id: @cash_balance.user_id }
     assert_redirected_to cash_balance_path(assigns(:cash_balance))
   end
 
